@@ -32,7 +32,7 @@ waypoints = [
         "name": "a third place"
     }
 ]
-
+# Whoops
 # Add a new waypoint to the list
 # YOUR CODE HERE
 waypoints.append({})
