@@ -21,7 +21,8 @@ y = [x**3 for x in range(10)]
 print(y)
 
 # Write a list comprehension to produce the uppercase version of all the
-# elements in array a. Hint: "foo".upper() is "FOO".
+# elements in array a. Hint: "foo".upper() is "FOO".1
+
 
 a = ["foo", "bar", "baz"]
 

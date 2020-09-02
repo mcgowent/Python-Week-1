@@ -30,3 +30,21 @@ it should use today’s date to get the month and year.
 import sys
 import calendar
 from datetime import datetime
+
+
+def calCheck():
+  if len(sys.argv) >= 2:
+    m = int(sys.argv[1])
+  else:
+    m = 12
+  if len(sys.argv) >= 3:
+    y = int(sys.argv[2])
+  else:
+    y = 2019
+  if (1 <= m <= 12 and 1991 <= y):
+    print(calendar.prmonth(y, m))
+  else:
+    print(f"The proper parameters are (month)[1-12] year[2000>]")
+
+
+calCheck()
