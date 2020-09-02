@@ -5,40 +5,48 @@
 
 
 class LatLon:
-  def __init__(self, lat, lon):
-    self.lat = lat
-    self.lon = lon
-    super().__init__()
-
+    def __init__(self, lat, lon):
+        self.lat = lat
+        self.lon = lon
 
 # Make a class Waypoint that can be passed parameters `name`, `lat`, and `lon` to the
 # constructor. It should inherit from LatLon. Look up the `super` method.
 
+
+class Goblin:
+    def __init__(self, health, attack):
+        self.health = health
+        self.attack = attack
+
+
 # YOUR CODE HERE
+
+
 class Waypoint(LatLon):
-  def __init__(self, name, lat, lon):
-    super().__init__(lat, lon)
-    self.name = name
+    def __init__(self, name, lat, lon):
+        super().__init__(lat, lon)
+        self.name = name
 
-  def __str__(self):
-    return f"The waypoint {self.name} is located at {self.lat} latitude and {self.lon} longitude"
-
+    def __str__(self):
+        return f"The waypoint {self.name} is located at {self.lat} latitude and {self.lon} longitude"
 
 # Make a class Geocache that can be passed parameters `name`, `difficulty`,
 # `size`, `lat`, and `lon` to the constructor. What should it inherit from?
 
 # YOUR CODE HERE
+
+
 class Geocache(Waypoint):
-  def __init__(self, name, difficulty, size, lat, lon):
-    self.size = size
-    self.difficulty = difficulty
-    super().__init__(name, lat, lon)
+    def __init__(self, name, difficulty, size, lat, lon):
+        self.size = size
+        self.difficulty = difficulty
+        super().__init__(name, lat, lon)
 
-  def __str__(self):
-    return f"The waypoint {self.name} is located at {self.lat} latitude and {self.lon} longitude. The difficulty to reach this location is {self.difficulty}, and the size of the mountain is {self.size}"
-
+    def __str__(self):
+        return f"The waypoint {self.name} is located at {self.lat} latitude and {self.lon} longitude. The difficulty to reach this location is {self.difficulty}, and the size of the mountain is {self.size}"
 
 # Make a new waypoint and print it out: "Catacombs", 41.70505, -121.51521
+
 
 # YOUR CODE HERE
 waypoint = Waypoint("Catacombs", 41.70505, -121.51521)
